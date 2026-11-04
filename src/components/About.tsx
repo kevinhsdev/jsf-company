@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Split from "./Split";
-import atendimento from "@/assets/atendimento.jpg";
+import atendimento from "@/assets/atendimento.png";
 import { site } from "@/content";
 
 const stats = [
@@ -39,14 +39,14 @@ export default function About() {
   return (
     <section id="sobre" ref={root} className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-44">
       <div className="grid gap-16 md:grid-cols-12">
-        <div className="md:col-span-6">
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] bg-sage/30">
+        <div className="md:col-span-5">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-sage/30">
             <div className="about-img absolute inset-x-0 -top-[10%] h-[120%]">
-              <Image src={atendimento} alt="Fonoaudióloga em atendimento com uma criança" fill sizes="(min-width: 768px) 50vw, 100vw" quality={95} priority className="object-cover object-[60%_50%]" />
+              <Image src={atendimento} alt="Fonoaudióloga explicando uma análise de voz a um paciente" fill sizes="(min-width: 768px) 50vw, 100vw" quality={95} priority className="object-cover object-[50%_30%]" />
             </div>
           </div>
         </div>
-        <div className="about-copy flex flex-col justify-center md:col-span-6 md:pl-10">
+        <div className="about-copy flex flex-col justify-center md:col-span-7 md:pl-10">
           <p className="about-fade mb-6 text-xs uppercase tracking-[0.25em] text-clay">Quem cuida</p>
           <Split
             text="Fonoaudiologia que começa *ouvindo* de verdade."
