@@ -26,9 +26,9 @@ export default function Services() {
         scrollTrigger: {
           trigger: root.current,
           start: "top top",
-          end: () => `+=${dist()}`,
+          end: () => `+=${dist() * 1.8}`,
           pin: true,
-          scrub: 0.6,
+          scrub: 2.2,
           invalidateOnRefresh: true,
           onUpdate: (s) => bar.current && (bar.current.style.transform = `scaleX(${s.progress})`),
         },
@@ -50,40 +50,25 @@ export default function Services() {
           </div>
         </div>
 
-        <div ref={track} className="flex flex-col gap-5 px-6 md:w-max md:flex-row md:gap-8 md:px-10">
+        <div ref={track} className="flex flex-col gap-14 px-6 md:w-max md:flex-row md:gap-24 md:px-10">
           {services.map((s) => (
-            <article
-              key={s.n}
-              className="group relative flex shrink-0 flex-col justify-between overflow-hidden rounded-[2rem] border border-cream/10 p-8 md:h-[46vh] md:min-h-[340px] md:w-[min(34vw,480px)] md:p-10"
-              style={{ background: `linear-gradient(160deg, ${s.color}33, transparent 70%)` }}
-            >
-              <div
-                className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full opacity-40 blur-3xl transition-opacity duration-700 group-hover:opacity-80"
-                style={{ background: s.color }}
-              />
-              <span className="display relative text-6xl font-light italic opacity-50">{s.n}</span>
-              <div className="relative mt-10">
-                <h3 className="display mb-4 text-3xl font-light md:text-4xl">{s.title}</h3>
-                <p className="mb-6 max-w-sm leading-relaxed opacity-75">{s.text}</p>
-                <ul className="flex flex-wrap gap-2">
-                  {s.tags.map((t) => (
-                    <li key={t} className="rounded-full border border-cream/25 px-3 py-1 text-xs">
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <article key={s.n} className="flex shrink-0 flex-col border-t border-cream/20 pt-6 md:w-[min(30vw,400px)]">
+              <span className="mb-16 text-xs tracking-[0.25em] opacity-50 md:mb-[8vh]">{s.n}</span>
+              <h3 className="display mb-5 text-3xl font-light md:text-4xl">{s.title}</h3>
+              <p className="mb-6 max-w-sm leading-relaxed opacity-60">{s.text}</p>
+              <p className="text-xs opacity-40">{s.tags.join("  ·  ")}</p>
             </article>
           ))}
           <a
             href={waLink()}
             target="_blank"
             rel="noopener"
-            className="display flex shrink-0 items-center justify-center gap-3 rounded-[2rem] bg-clay p-10 text-3xl font-light transition hover:bg-cream hover:text-ink md:h-[46vh] md:min-h-[340px] md:w-[min(28vw,380px)] md:text-4xl"
+            className="display flex shrink-0 items-end gap-3 border-t border-clay pt-6 text-3xl font-light text-clay transition-opacity hover:opacity-70 md:w-[min(22vw,300px)] md:text-4xl"
           >
             Conversar agora <span>→</span>
           </a>
         </div>
+
       </div>
     </section>
   );
