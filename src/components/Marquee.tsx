@@ -9,7 +9,7 @@ function Row({ reverse = false, outline = false }: { reverse?: boolean; outline?
           {words.map((w) => (
             <span
               key={w}
-              className={`display px-6 text-[clamp(3.5rem,11vw,9rem)] font-light leading-[1.05] md:px-10 ${
+              className={`display px-6 text-[clamp(2rem,6vw,4.75rem)] font-light leading-[1.05] md:px-10 ${
                 outline ? "text-transparent [-webkit-text-stroke:1px_var(--ink)]" : "italic text-clay"
               }`}
             >
@@ -24,7 +24,7 @@ function Row({ reverse = false, outline = false }: { reverse?: boolean; outline?
 
 export default function Marquee() {
   return (
-    <div className="overflow-hidden py-10 md:py-16" aria-hidden>
+    <div className="overflow-hidden py-8 md:py-12" aria-hidden>
       <Row outline />
       <Row reverse />
     </div>

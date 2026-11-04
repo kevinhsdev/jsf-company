@@ -42,7 +42,7 @@ export default function About() {
         <div className="md:col-span-6">
           <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] bg-sage/30">
             <div className="about-img absolute inset-x-0 -top-[10%] h-[120%]">
-              <Image src={atendimento} alt="Fonoaudióloga em atendimento com uma criança" fill sizes="(min-width: 768px) 50vw, 100vw" placeholder="blur" className="object-cover object-[60%_50%]" />
+              <Image src={atendimento} alt="Fonoaudióloga em atendimento com uma criança" fill sizes="(min-width: 768px) 50vw, 100vw" quality={95} priority className="object-cover object-[60%_50%]" />
             </div>
           </div>
         </div>
