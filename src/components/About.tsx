@@ -37,7 +37,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="sobre" ref={root} className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-44">
+    <section id="sobre" ref={root} className="mx-auto max-w-[1400px] px-6 pb-28 pt-14 md:px-10 md:pb-44 md:pt-20">
       <div className="grid gap-16 md:grid-cols-12">
         <div className="md:col-span-5">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-sage/30">
