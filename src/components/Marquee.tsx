@@ -22,11 +22,30 @@ function Row({ reverse = false, outline = false }: { reverse?: boolean; outline?
   );
 }
 
+// Linha fina com losango central e rótulo, para separar a faixa do hero e da seção seguinte.
+function Divider({ label }: { label: string }) {
+  return (
+    <div className="mx-auto flex max-w-[1400px] items-center gap-5 px-6 md:px-10">
+      <span className="h-px flex-1 bg-gradient-to-r from-transparent to-ink/25" />
+      <span className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.3em] text-ink/55">
+        <span className="h-1.5 w-1.5 rotate-45 bg-clay" />
+        {label}
+        <span className="h-1.5 w-1.5 rotate-45 bg-clay" />
+      </span>
+      <span className="h-px flex-1 bg-gradient-to-l from-transparent to-ink/25" />
+    </div>
+  );
+}
+
 export default function Marquee() {
   return (
-    <div className="overflow-hidden py-8 md:py-12" aria-hidden>
-      <Row outline />
-      <Row reverse />
+    <div className="py-10 md:py-14">
+      <Divider label="Áreas de atuação" />
+      <div className="overflow-hidden py-8 md:py-10" aria-hidden>
+        <Row outline />
+        <Row reverse />
+      </div>
+      <Divider label="Quem cuida" />
     </div>
   );
 }
