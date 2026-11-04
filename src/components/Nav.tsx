@@ -10,6 +10,7 @@ const links = [
   ["Dúvidas", "#faq"],
 ];
 
+// Pílula flutuante centralizada; ganha mais corpo depois que a página rola.
 export default function Nav() {
   const [solid, setSolid] = useState(false);
   useEffect(() => {
@@ -20,20 +21,19 @@ export default function Nav() {
   }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        solid ? "bg-sand/80 py-3 backdrop-blur-md" : "py-6"
-      }`}
-    >
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-10">
-        <a href="#" className="display text-2xl font-medium">
+    <header className="pointer-events-none fixed inset-x-0 top-4 z-50 flex justify-center px-4 md:top-6">
+      <div
+        className={`pointer-events-auto flex w-full max-w-[860px] items-center justify-between gap-6 rounded-full border border-ink/10 py-2 pl-6 pr-2 backdrop-blur-xl transition-all duration-500 ${
+          solid ? "bg-cream/85 shadow-[0_10px_40px_-12px_rgba(42,31,26,0.25)]" : "bg-cream/55"
+        }`}
+      >
+        <a href="#" className="display text-xl font-medium">
           {site.short}
           <span className="text-clay">.</span>
-          <span className="ml-3 hidden font-sans text-xs uppercase tracking-[0.2em] opacity-60 sm:inline">{site.name}</span>
         </a>
-        <nav className="hidden items-center gap-9 text-sm md:flex">
+        <nav className="hidden items-center gap-8 text-sm md:flex">
           {links.map(([l, h]) => (
-            <a key={h} href={h} className="relative opacity-80 transition hover:opacity-100">
+            <a key={h} href={h} className="opacity-70 transition hover:opacity-100">
               {l}
             </a>
           ))}
