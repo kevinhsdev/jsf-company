@@ -35,6 +35,8 @@ export default function Hero({ variant = site.heroVariant }: { variant?: HeroVar
       <div className="hero-canvas absolute inset-0">
         <HeroShader variant={variant} />
       </div>
+      {/* véu sobre o fundo para o texto ficar legível: forte no celular, suave à esquerda no desktop */}
+      <div className="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-t from-sand via-sand/80 to-sand/10 md:bg-gradient-to-r md:from-sand/75 md:via-sand/35 md:to-transparent" />
       <div className="hero-content relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-14 md:px-10 md:pb-20">
         <p className="hero-fade mb-6 text-xs uppercase tracking-[0.25em] opacity-70">
           {site.tagline} · {site.city}
