@@ -57,6 +57,9 @@ body {
 @keyframes marquee { to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 110s linear infinite; }
 
+@keyframes marquee-back { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.marquee-reverse { animation-name: marquee-back; }
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
 }
