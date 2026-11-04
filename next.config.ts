@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // GitHub Pages serve arquivos estáticos em /<repositório>/
+  output: "export",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
+  images: { unoptimized: true },
+  trailingSlash: true,
   turbopack: {
     rules: {
       "*.css": {
