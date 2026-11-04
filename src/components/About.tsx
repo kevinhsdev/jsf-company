@@ -2,7 +2,9 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 import Split from "./Split";
+import atendimento from "@/assets/atendimento.svg";
 import { site } from "@/content";
 
 const stats = [
@@ -38,11 +40,10 @@ export default function About() {
     <section id="sobre" ref={root} className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-44">
       <div className="grid gap-16 md:grid-cols-12">
         <div className="md:col-span-5">
-          {/* TODO: troque pelo retrato real em /public/joia.jpg e use <Image> */}
+          {/* TODO: troque a ilustração por uma foto real dela em atendimento */}
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-sage/30">
-            <div className="about-img absolute inset-x-0 -top-[10%] h-[120%] bg-gradient-to-br from-clay/70 via-[#d9a37f] to-sage" />
-            <div className="absolute inset-0 flex items-end p-8">
-              <span className="display text-8xl text-cream/90">JSF</span>
+            <div className="about-img absolute inset-x-0 -top-[10%] h-[120%]">
+              <Image src={atendimento} alt="Ilustração de atendimento fonoaudiológico com uma criança" fill sizes="(min-width: 768px) 40vw, 100vw" className="object-cover" />
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function Testimonials() {
   const go = (d: number) => setI((v) => (v + d + n) % n);
 
   useEffect(() => {
-    const t = setInterval(() => setI((v) => (v + 1) % n), 12000);
+    const t = setInterval(() => setI((v) => (v + 1) % n), 7000);
     return () => clearInterval(t);
   }, [i, n]);
 
@@ -21,8 +21,8 @@ export default function Testimonials() {
           {testimonials.map((t, k) => (
             <figure
               key={k}
-              className={`absolute inset-0 transition-all duration-[1800ms] ease-out ${
-                k === i ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
+              className={`absolute inset-0 transition-all duration-1000 ease-out ${
+                k === i ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
               }`}
               aria-hidden={k !== i}
             >

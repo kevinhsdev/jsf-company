@@ -55,7 +55,7 @@ body {
 .word-inner { display: inline-block; will-change: transform; }
 
 @keyframes marquee { to { transform: translateX(-50%); } }
-.marquee-track { animation: marquee 38s linear infinite; }
+.marquee-track { animation: marquee 110s linear infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
