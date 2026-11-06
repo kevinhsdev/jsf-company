@@ -4,6 +4,9 @@ import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import Audiology from "@/components/Audiology";
+import Gallery from "@/components/Gallery";
+import Certificates from "@/components/Certificates";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
@@ -20,6 +23,9 @@ export default function Home() {
         <Marquee />
         <About />
         <Services />
+        <Audiology />
+        <Certificates />
+        <Gallery />
         <Process />
         <Testimonials />
         <Faq />

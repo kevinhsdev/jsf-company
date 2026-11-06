@@ -13,7 +13,8 @@ Site de portfólio da fonoaudióloga Joia Silva (empresa recém-aberta, CNPJ pr�
 - Todo o texto e dados: `src/content.ts` (itens com `TODO` são exemplos)
 - Hero: `src/components/Hero.tsx` e `shaders.ts`. Variantes `waves`, `aurora`, `ripples`; escolhida em `site.heroVariant` (hoje `ripples`). Prévia em `/preview/<variante>`.
 - Faixa de palavras com divisórias: `Marquee.tsx`
-- Foto da seção Sobre: `src/assets/atendimento.png`
+- Fotos reais: `src/assets/fotos/` (Sobre = consultorio.jpg). Logo e variantes: `src/assets/logo*.png`, `assinatura.png`
+- Seções novas: `Audiology.tsx` (exames em `hearing`), `Certificates.tsx` (mural; imagens em `src/assets/certificados/`, CPF do CBFONO tarjado), `Gallery.tsx`
 - Cabeçalho: pílula flutuante em `Nav.tsx`, esconde ao rolar para baixo
 
 ## Preferências dadas pelo usuário
@@ -23,8 +24,8 @@ Site de portfólio da fonoaudióloga Joia Silva (empresa recém-aberta, CNPJ pr�
 - Divisória de baixo da faixa sem rótulo (para não repetir o título "Quem cuida")
 
 ## Pendências
-- Aguardando da cliente: CRFa, Instagram, e-mail e alterações que ela pediu (usuário vai enviar)
-- WhatsApp já configurado: +55 11 99774-9073; cidade: São Paulo, SP
+- Confirmar com a cliente a lista de exames de audiologia (`hearing` em content.ts)
+- Autorização dos pais para fotos com rosto de criança
+- Ano dos certificados Hospitalar e CBFONO; e-mail real
 - Trocar números e depoimentos de exemplo ("+500 atendimentos", 3 depoimentos) por reais
-- A foto de Sobre parece gerada por IA; trocar por foto real dela
-- Opcional: logo (usuário adicionou o marketplace `kaankiziltug/logo-design-skill`; falta rodar `/plugin install logo-design@logo-design-skill` e `/reload-plugins`), SEO local, domínio próprio
+- Material bruto da cliente (fotos originais, PDFs com CPF) fica na raiz e está no .gitignore: não commitar

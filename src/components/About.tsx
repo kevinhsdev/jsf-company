@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Split from "./Split";
-import atendimento from "@/assets/atendimento.png";
+import foto from "@/assets/fotos/consultorio.jpg";
 import { site } from "@/content";
 
 const stats = [
@@ -42,7 +42,7 @@ export default function About() {
         <div className="md:col-span-5">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-sage/30">
             <div className="about-img absolute inset-x-0 -top-[10%] h-[120%]">
-              <Image src={atendimento} alt="Fonoaudióloga explicando uma análise de voz a um paciente" fill sizes="(min-width: 768px) 50vw, 100vw" quality={95} priority className="object-cover object-[50%_30%]" />
+              <Image src={foto} alt="Joia Silva no consultório" fill sizes="(min-width: 768px) 50vw, 100vw" priority className="object-cover object-[60%_40%]" />
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function About() {
             className="display text-[clamp(2.4rem,5.5vw,5rem)] font-light"
           />
           <p className="about-fade mt-8 max-w-xl text-lg leading-relaxed opacity-80">
-            Sou Joia Silva, fonoaudióloga. Acredito que comunicar é muito mais que falar: é se sentir parte do mundo. Cada
+            Sou Joia Silva, fonoaudióloga especialista em audiologia, com atuação também em disfagia e linguagem. Acredito que comunicar é muito mais que falar: é ouvir e se sentir parte do mundo. Cada
             paciente chega com uma história, e é a partir dela que construo o plano de cuidado, sempre junto da família.
           </p>
           <p className="about-fade mt-4 text-sm opacity-60">{site.crfa}</p>

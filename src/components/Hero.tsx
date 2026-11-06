@@ -45,12 +45,12 @@ export default function Hero({ variant = site.heroVariant }: { variant?: HeroVar
           as="h1"
           onLoad
           delay={0.2}
-          text="Cada voz tem uma *história* para contar."
+          text="Escutar bem para *viver* melhor."
           className="display max-w-[16ch] text-[clamp(3rem,9.5vw,9rem)] font-light"
         />
         <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <p className="hero-fade max-w-md text-lg leading-relaxed opacity-80">
-            Fonoaudiologia com escuta atenta para crianças, jovens e adultos. Linguagem, voz e comunicação, no seu tempo.
+            Fonoaudiologia com escuta atenta para crianças, jovens e adultos. Audiologia, disfagia e linguagem, no seu tempo.
           </p>
           <div className="hero-fade flex items-center gap-5">
             <a

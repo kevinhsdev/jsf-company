@@ -54,7 +54,7 @@ export default function Services() {
           {services.map((s) => (
             <article
               key={s.n}
-              className="group relative flex shrink-0 flex-col justify-between overflow-hidden rounded-[2rem] border border-cream/10 p-8 md:h-[46vh] md:min-h-[340px] md:w-[min(34vw,480px)] md:p-10"
+              className="group relative flex shrink-0 flex-col justify-between overflow-hidden rounded-[2rem] border border-cream/10 p-8 md:min-h-[max(46vh,340px)] md:w-[min(34vw,480px)] md:p-10"
               style={{ background: `linear-gradient(160deg, ${s.color}33, transparent 70%)` }}
             >
               <div
@@ -79,7 +79,7 @@ export default function Services() {
             href={waLink()}
             target="_blank"
             rel="noopener"
-            className="display flex shrink-0 items-center justify-center gap-3 rounded-[2rem] bg-clay p-10 text-3xl font-light transition hover:bg-cream hover:text-ink md:h-[46vh] md:min-h-[340px] md:w-[min(28vw,380px)] md:text-4xl"
+            className="display flex shrink-0 items-center justify-center gap-3 rounded-[2rem] bg-clay p-10 text-3xl font-light transition hover:bg-cream hover:text-ink md:min-h-[max(46vh,340px)] md:w-[min(28vw,380px)] md:text-4xl"
           >
             Conversar agora <span>→</span>
           </a>

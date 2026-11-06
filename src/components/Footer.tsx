@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Split from "./Split";
+import logo from "@/assets/logo-claro.png";
 import { site, waLink } from "@/content";
 
 export default function Footer() {
@@ -18,10 +20,7 @@ export default function Footer() {
 
         <div className="mt-28 grid gap-10 border-t border-cream/15 pt-10 text-sm md:grid-cols-3">
           <div>
-            <p className="display text-2xl">
-              {site.short}
-              <span className="text-clay">.</span> {site.name}
-            </p>
+            <Image src={logo} alt={site.name} className="h-auto w-44" />
             <p className="mt-2 opacity-60">
               {site.tagline} · {site.crfa}
             </p>
@@ -32,7 +31,7 @@ export default function Footer() {
             <p>{site.email}</p>
           </div>
           <div className="space-y-1 md:text-right">
-            <a href="#" className="block opacity-80 hover:opacity-100">
+            <a href={`https://instagram.com/${site.instagram.slice(1)}`} target="_blank" rel="noopener" className="block opacity-80 hover:opacity-100">
               Instagram {site.instagram}
             </a>
             <p className="opacity-40">© 2026 {site.name}. Todos os direitos reservados.</p>

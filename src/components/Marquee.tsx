@@ -1,4 +1,4 @@
-const words = ["Linguagem", "Voz", "Fala", "Fluência", "Deglutição", "Leitura", "Escuta", "Comunicação"];
+const words = ["Audição", "Linguagem", "Disfagia", "Fala", "Fluência", "Deglutição", "Leitura", "Comunicação"];
 
 // Duas linhas gigantes em sentidos opostos: contorno vazado em cima, itálico sólido embaixo.
 function Row({ reverse = false, outline = false }: { reverse?: boolean; outline?: boolean }) {

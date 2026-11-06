@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# material bruto da cliente (fotos originais e certificados com CPF)
+/*.pdf
+/*.jpeg

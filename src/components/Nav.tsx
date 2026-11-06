@@ -1,11 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import marca from "@/assets/logo-marca.png";
+import assinatura from "@/assets/assinatura.png";
 import { site, waLink } from "@/content";
 
 const links = [
   ["Sobre", "#sobre"],
   ["Especialidades", "#servicos"],
+  ["Audiologia", "#audiologia"],
   ["Como funciona", "#processo"],
   ["Dúvidas", "#faq"],
 ];
@@ -37,15 +41,15 @@ export default function Nav() {
       }`}
     >
       <div
-        className={`pointer-events-auto flex w-full max-w-[860px] items-center justify-between gap-6 rounded-full border border-ink/10 py-2 pl-6 pr-2 backdrop-blur-xl transition-all duration-500 ${
+        className={`pointer-events-auto flex w-full max-w-[860px] items-center justify-between gap-6 rounded-full border border-ink/10 py-2 pl-3 pr-2 backdrop-blur-xl transition-all duration-500 ${
           solid ? "bg-cream/85 shadow-[0_10px_40px_-12px_rgba(42,31,26,0.25)]" : "bg-cream/55"
         }`}
       >
-        <a href="#" className="display text-xl font-medium">
-          {site.short}
-          <span className="text-clay">.</span>
+        <a href="#" className="flex items-center gap-1" aria-label={site.name}>
+          <Image src={marca} alt="" className="h-9 w-9" priority />
+          <Image src={assinatura} alt="" className="h-7 w-auto" priority />
         </a>
-        <nav className="hidden items-center gap-8 text-sm md:flex">
+        <nav className="hidden items-center gap-6 text-sm md:flex">
           {links.map(([l, h]) => (
             <a key={h} href={h} className="opacity-70 transition hover:opacity-100">
               {l}

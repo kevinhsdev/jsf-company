@@ -18,10 +18,10 @@ const instrument = Instrument_Sans({
 export const metadata: Metadata = {
   title: `${site.name} | Fonoaudiologia com acolhimento`,
   description:
-    "Fonoaudiologia para crianças, jovens e adultos: linguagem, fala, voz, motricidade orofacial e fluência. Agende uma avaliação pelo WhatsApp.",
+    "Fonoaudiologia para crianças, jovens e adultos: audiologia e exames de audição, disfagia, linguagem, fala e fluência. Agende uma avaliação pelo WhatsApp.",
   openGraph: {
     title: `${site.name} | Fonoaudiologia`,
-    description: "Cuidado que dá voz a cada história. Agende sua avaliação.",
+    description: "Audiologia, disfagia e linguagem com acolhimento. Agende sua avaliação.",
     locale: "pt_BR",
     type: "website",
   },
